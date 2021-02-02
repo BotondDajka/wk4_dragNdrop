@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css"/>
+        <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+    </head>
+
+
+
+    <body>
+
+        <div id="todo" class="todo box">
+            <div id="task1" class="task" draggable="true">Make this look nice</div>
+            <div id="task2" class="task" draggable="true">idk</div>
+
+        </div>
+
+
+        <div id="doing" class="doing box">
+            <div id="task3" class="task" draggable="true">Yoooooo</div>
+        </div>
+
+        <div id="done" class="done box"> 
+            <div id="task4" class="task" draggable="true">Task 1244545</div>
+        </div>
+
+        <script>
+
+
+            const sortable1 = new Sortable(document.getElementById('todo'),{
+                group: "to-do",
+                animation: 150,
+            });
+
+            const sortable2 = new Sortable(document.getElementById('doing'),{
+                group: "to-do",
+                animation: 150
+            });
+
+            const sortable3 = new Sortable(document.getElementById('done'),{
+                group: "to-do",
+                animation: 150
+            });
+
+        </script>
+    </body>
+</html>
